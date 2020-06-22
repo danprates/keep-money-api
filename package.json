@@ -1,10 +1,10 @@
 {
-  "name": "api",
+  "name": "keep-money-api",
   "version": "0.0.1",
   "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "author": "Daniel Prates",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
