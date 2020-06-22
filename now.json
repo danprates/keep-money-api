@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "keep-money-api",
   "builds": [
     {
       "src": "dist/main.js",
