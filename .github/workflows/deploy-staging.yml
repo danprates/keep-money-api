@@ -1,4 +1,4 @@
-name: deploy API to production
+name: deploy API to staging
 
 on:
   push:

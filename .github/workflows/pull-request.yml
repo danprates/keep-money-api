@@ -1,4 +1,4 @@
-name: deploy API to production
+name: Test API on pull request
 
 on: pull_request
 
