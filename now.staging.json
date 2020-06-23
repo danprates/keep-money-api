@@ -3,6 +3,7 @@
   "github": {
     "enabled": false
   },
+  "alias": "staging.api.keep-money.tk",
   "builds": [
     {
       "src": "dist/main.js",
