@@ -1,8 +1,9 @@
 name: deploy API to production
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
 
 jobs:
   deploy:
