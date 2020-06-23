@@ -7,7 +7,7 @@
   "builds": [
     {
       "src": "dist/main.js",
-      "use": "@now/node"
+      "use": "@now/node-server"
     }
   ],
   "routes": [
