@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:alpine
+    container_name: keep-money-db
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - keep-money-db:/var/lib/postgresql/data
+    networks:
+      - base
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: keep-money
+
+  teste-pgadmin-compose:
+    image: dpage/pgadmin4
+    container_name: keep-money-admin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'admin@docker.com'
+      PGADMIN_DEFAULT_PASSWORD: 'root'
+    ports:
+      - '8080:80'
+    depends_on:
+      - db
+    networks:
+      - base
+
+volumes:
+  keep-money-db:
+
+networks:
+  base:
