@@ -23,15 +23,23 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "deploy:production": "npx now --prod --local-config ./now.prod.json --token $TOKEN --confirm",
-    "deploy:staging": "npx now --prod --local-config ./now.staging.json --token $TOKEN --confirm"
+    "deploy:staging": "npx now --prod --local-config ./now.staging.json --token $TOKEN --confirm",
+    "migration:create": "ts-node node_modules/.bin/typeorm migration:create  --config src/config/type-orm.config.ts",
+    "migration:generate": "ts-node node_modules/.bin/typeorm migration:generate  --config src/config/type-orm.config.ts",
+    "migration:run": "ts-node node_modules/.bin/typeorm migration:run  --config src/config/type-orm.config.ts",
+    "migration:revert": "ts-node node_modules/.bin/typeorm migration:revert  --config src/config/type-orm.config.ts"
   },
   "dependencies": {
     "@nestjs/common": "^7.4.4",
     "@nestjs/core": "^7.4.4",
     "@nestjs/platform-express": "^7.4.4",
+    "@nestjs/typeorm": "^7.1.4",
+    "pg": "^8.3.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.6.3"
+    "rxjs": "^6.6.3",
+    "typeorm": "^0.2.26",
+    "typeorm-naming-strategies": "^2.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",
